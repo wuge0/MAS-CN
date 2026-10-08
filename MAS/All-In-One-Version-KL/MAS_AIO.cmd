@@ -6,7 +6,6 @@
 @set masver=3.12
 @setlocal DisableDelayedExpansion
 @echo off
-chcp 65001 >nul
 
 
 
@@ -380,7 +379,7 @@ if not %_unattended%==1 (
 echo [1] Get Latest MAS
 echo [0] Continue Anyway
 echo:
-call :dk_color %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,0] :"
+call :dk_color %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,0] :"
 choice /C:10 /N
 if !errorlevel!==2 rem
 if !errorlevel!==1 (start %selfgit% & start %github% & start %mas% & exit /b)
@@ -456,13 +455,13 @@ echo:
 echo:
 echo:
 if %winbuild% GEQ 10240 if %winbuild% LEQ 19045 if not defined _serexist if not defined _evalexist if not defined _ltscexist (
-call :dk_color2 %_Green% "       Tip:" %_White% " Win10 åœæ­¢æ”¯æŒåï¼Œç”¨ TSforge é€‰é¡¹å¯æ¿€æ´» ESU æ‰©å±•æ›´æ–°ã€‚"
+call :dk_color2 %_Green% "       Tip:" %_White% " Win10 Í£Ö¹Ö§³Öºó£¬ÓÃ TSforge Ñ¡Ïî¿É¼¤»î ESU À©Õ¹¸üĞÂ¡£"
 )
 echo:
 echo:
 echo:       ______________________________________________________________
 echo:
-echo:                 æ¿€æ´»æ–¹å¼ï¼š
+echo:                 ¼¤»î·½Ê½£º
 echo:
 if defined _hwidgo (
 call :dk_color3 %_White% "             [1] " %_Green% "HWID" %_White% "                - Windows"
@@ -482,18 +481,18 @@ echo:             [3] TSforge             - Windows / Office / ESU
 echo:             [4] Online KMS          - Windows / Office
 echo:             __________________________________________________ 
 echo:
-echo:             [5] æŸ¥çœ‹æ¿€æ´»çŠ¶æ€
-echo:             [6] æ›´æ”¹ Windows ç‰ˆæœ¬
-echo:             [7] æ›´æ”¹ Office ç‰ˆæœ¬
+echo:             [5] ²é¿´¼¤»î×´Ì¬
+echo:             [6] ¸ü¸Ä Windows °æ±¾
+echo:             [7] ¸ü¸Ä Office °æ±¾
 echo:             __________________________________________________      
 echo:
-echo:             [8] æ•…éšœæ’æŸ¥
-echo:             [E] æ›´å¤šå·¥å…·
-echo:             [H] å¸®åŠ©
-echo:             [0] é€€å‡º
+echo:             [8] ¹ÊÕÏÅÅ²é
+echo:             [E] ¸ü¶à¹¤¾ß
+echo:             [H] °ïÖú
+echo:             [0] ÍË³ö
 echo:       ______________________________________________________________
 echo:
-call :dk_color2 %_White% "         " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,2,3...E,H,0] :"
+call :dk_color2 %_White% "         " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,2,3...E,H,0] :"
 choice /C:12345678EH0 /N
 set _erl=%errorlevel%
 
@@ -541,7 +540,7 @@ echo:
 echo:                [0] Go to Main Menu
 echo:           ______________________________________________________
 echo:
-call :dk_color2 %_White% "             " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,2,0] :"
+call :dk_color2 %_White% "             " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,2,0] :"
 choice /C:120 /N
 set _erl=%errorlevel%
 
@@ -593,7 +592,7 @@ call :dk_color2 %_White% "            [R] " %_Green% "ReadMe"
 echo:            [0] Go Back
 echo:         ____________________________________________________________
 echo:  
-call :dk_color2 %_White% "             " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ :"
+call :dk_color2 %_White% "             " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî :"
 choice /C:1234567R0 /N
 set _erl=%errorlevel%
 
@@ -2519,7 +2518,7 @@ echo:
 echo                 [0] %_exitmsg%
 echo         ____________________________________________________________
 echo: 
-call :dk_color2 %_White% "             " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,2,3,0]"
+call :dk_color2 %_White% "             " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,2,3,0]"
 choice /C:1230 /N
 set _el=!errorlevel!
 if !_el!==4  exit /b
@@ -4405,7 +4404,7 @@ echo               [7] Download Office
 echo               [0] %_exitmsg%
 echo        ______________________________________________________________
 echo:
-call :dk_color2 %_White% "            " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹..."
+call :dk_color2 %_White% "            " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî..."
 choice /C:12345ABCDEF670 /N
 set _el=!errorlevel!
 
@@ -4466,7 +4465,7 @@ echo              [5] Learn More
 echo              [0] %_exitmsg%
 echo        ______________________________________________________________
 echo:
-call :dk_color2 %_White% "            " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹..."
+call :dk_color2 %_White% "            " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî..."
 choice /C:123450 /N
 set _el=!errorlevel!
 
@@ -12141,7 +12140,7 @@ echo               [9] Download Office
 echo               [0] %_exitmsg%
 echo        ______________________________________________________________
 echo:
-call :dk_color2 %_White% "       " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,2,3,4,5,6,7,8,9,0]"
+call :dk_color2 %_White% "       " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,2,3,4,5,6,7,8,9,0]"
 choice /C:1234567890 /N
 set _el=!errorlevel!
 
@@ -16022,7 +16021,7 @@ echo:
 echo:             [0] %_exitmsg%
 echo:       _______________________________________________________________
 echo:          
-call :dk_color2 %_White% "            " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ :"
+call :dk_color2 %_White% "            " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî :"
 choice /C:1234560 /N
 set _erl=%errorlevel%
 
@@ -17373,7 +17372,7 @@ echo:
 echo [1] Continue Anyway
 echo [0] Go Back
 echo:
-call :dk_color %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,0] :"
+call :dk_color %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,0] :"
 choice /C:10 /N
 if !errorlevel!==2 goto cedmenu2
 if !errorlevel!==1 rem
@@ -18199,7 +18198,7 @@ echo                 [5] Change Office Update Channel
 echo                 [0] %_exitmsg%
 echo         ____________________________________________________________
 echo: 
-call :dk_color2 %_White% "           " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,2,3,4,5,0]"
+call :dk_color2 %_White% "           " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,2,3,4,5,0]"
 choice /C:123450 /N
 set _el=!errorlevel!
 if !_el!==6  exit /b
@@ -18244,7 +18243,7 @@ echo:
 echo                 [0] Go Back
 echo         ____________________________________________________________
 echo: 
-call :dk_color2 %_White% "            " %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹ [1,2,3,4,0]"
+call :dk_color2 %_White% "            " %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî [1,2,3,4,0]"
 choice /C:12340 /N
 set _el=!errorlevel!
 if !_el!==5  goto :oemenu
@@ -18405,7 +18404,7 @@ echo [1] Continue
 echo [0] Go Back
 %line%
 echo:
-call :dk_color %_Green% "è¯·ç”¨é”®ç›˜é€‰æ‹©èœå•é€‰é¡¹:"
+call :dk_color %_Green% "ÇëÓÃ¼üÅÌÑ¡Ôñ²Ëµ¥Ñ¡Ïî:"
 choice /C:AENOPJRVWLKDT10 /N
 set _el=!errorlevel!
 if !_el!==15 goto :oemenu
