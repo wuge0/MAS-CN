@@ -30,8 +30,8 @@
 ### 方法二 - 传统方式（Windows Vista 及以上）
 
 1.   下载脚本：
-      *   [**MAS_AIO.cmd**](https://dev.azure.com/massgrave/Microsoft-Activation-Scripts/_apis/git/repositories/Microsoft-Activation-Scripts/items?path=/MAS/All-In-One-Version-KL/MAS_AIO.cmd&download=true)（直接脚本）
-      *   [**MAS_AIO.zip**](https://dev.azure.com/massgrave/Microsoft-Activation-Scripts/_apis/git/repositories/Microsoft-Activation-Scripts/items?$format=zip)（如果浏览器拦截了直接下载脚本）
+      *   [**MAS_AIO.cmd**](https://github.com/wuge0/MAS-CN/raw/master/MAS/All-In-One-Version-KL/MAS_AIO.cmd)（直接脚本）
+      *   [**MAS_AIO.zip**](https://github.com/wuge0/MAS-CN/archive/refs/heads/master.zip)（如果浏览器拦截了直接下载脚本）
 2.   运行 `MAS_AIO.cmd` 文件。
 3.   在出现的菜单里，输入对应**绿色**选项的数字。
 
