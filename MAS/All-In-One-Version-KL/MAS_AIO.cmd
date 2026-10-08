@@ -379,7 +379,7 @@ if not %_unattended%==1 (
 echo [1] Get Latest MAS
 echo [0] Continue Anyway
 echo:
-call :dk_color %_Green% "Choose a menu option using your keyboard [1,0] :"
+call :dk_color %_Green% "请用键盘选择菜单选项 [1,0] :"
 choice /C:10 /N
 if !errorlevel!==2 rem
 if !errorlevel!==1 (start %selfgit% & start %github% & start %mas% & exit /b)
@@ -455,13 +455,13 @@ echo:
 echo:
 echo:
 if %winbuild% GEQ 10240 if %winbuild% LEQ 19045 if not defined _serexist if not defined _evalexist if not defined _ltscexist (
-call :dk_color2 %_Green% "       Tip:" %_White% " To activate ESU updates after W10 EOL, use TSforge option."
+call :dk_color2 %_Green% "       Tip:" %_White% " Win10 停止支持后，用 TSforge 选项可激活 ESU 扩展更新。"
 )
 echo:
 echo:
 echo:       ______________________________________________________________
 echo:
-echo:                 Activation Methods:
+echo:                 激活方式：
 echo:
 if defined _hwidgo (
 call :dk_color3 %_White% "             [1] " %_Green% "HWID" %_White% "                - Windows"
@@ -481,18 +481,18 @@ echo:             [3] TSforge             - Windows / Office / ESU
 echo:             [4] Online KMS          - Windows / Office
 echo:             __________________________________________________ 
 echo:
-echo:             [5] Check Activation Status
-echo:             [6] Change Windows Edition
-echo:             [7] Change Office Edition
+echo:             [5] 查看激活状态
+echo:             [6] 更改 Windows 版本
+echo:             [7] 更改 Office 版本
 echo:             __________________________________________________      
 echo:
-echo:             [8] Troubleshoot
-echo:             [E] Extras
-echo:             [H] Help
-echo:             [0] Exit
+echo:             [8] 故障排查
+echo:             [E] 更多工具
+echo:             [H] 帮助
+echo:             [0] 退出
 echo:       ______________________________________________________________
 echo:
-call :dk_color2 %_White% "         " %_Green% "Choose a menu option using your keyboard [1,2,3...E,H,0] :"
+call :dk_color2 %_White% "         " %_Green% "请用键盘选择菜单选项 [1,2,3...E,H,0] :"
 choice /C:12345678EH0 /N
 set _erl=%errorlevel%
 
@@ -540,7 +540,7 @@ echo:
 echo:                [0] Go to Main Menu
 echo:           ______________________________________________________
 echo:
-call :dk_color2 %_White% "             " %_Green% "Choose a menu option using your keyboard [1,2,0] :"
+call :dk_color2 %_White% "             " %_Green% "请用键盘选择菜单选项 [1,2,0] :"
 choice /C:120 /N
 set _erl=%errorlevel%
 
@@ -592,7 +592,7 @@ call :dk_color2 %_White% "            [R] " %_Green% "ReadMe"
 echo:            [0] Go Back
 echo:         ____________________________________________________________
 echo:  
-call :dk_color2 %_White% "             " %_Green% "Choose a menu option using your keyboard :"
+call :dk_color2 %_White% "             " %_Green% "请用键盘选择菜单选项 :"
 choice /C:1234567R0 /N
 set _erl=%errorlevel%
 
@@ -2518,7 +2518,7 @@ echo:
 echo                 [0] %_exitmsg%
 echo         ____________________________________________________________
 echo: 
-call :dk_color2 %_White% "             " %_Green% "Choose a menu option using your keyboard [1,2,3,0]"
+call :dk_color2 %_White% "             " %_Green% "请用键盘选择菜单选项 [1,2,3,0]"
 choice /C:1230 /N
 set _el=!errorlevel!
 if !_el!==4  exit /b
@@ -4404,7 +4404,7 @@ echo               [7] Download Office
 echo               [0] %_exitmsg%
 echo        ______________________________________________________________
 echo:
-call :dk_color2 %_White% "            " %_Green% "Choose a menu option using your keyboard..."
+call :dk_color2 %_White% "            " %_Green% "请用键盘选择菜单选项..."
 choice /C:12345ABCDEF670 /N
 set _el=!errorlevel!
 
@@ -4465,7 +4465,7 @@ echo              [5] Learn More
 echo              [0] %_exitmsg%
 echo        ______________________________________________________________
 echo:
-call :dk_color2 %_White% "            " %_Green% "Choose a menu option using your keyboard..."
+call :dk_color2 %_White% "            " %_Green% "请用键盘选择菜单选项..."
 choice /C:123450 /N
 set _el=!errorlevel!
 
@@ -12140,7 +12140,7 @@ echo               [9] Download Office
 echo               [0] %_exitmsg%
 echo        ______________________________________________________________
 echo:
-call :dk_color2 %_White% "       " %_Green% "Choose a menu option using your keyboard [1,2,3,4,5,6,7,8,9,0]"
+call :dk_color2 %_White% "       " %_Green% "请用键盘选择菜单选项 [1,2,3,4,5,6,7,8,9,0]"
 choice /C:1234567890 /N
 set _el=!errorlevel!
 
@@ -16021,7 +16021,7 @@ echo:
 echo:             [0] %_exitmsg%
 echo:       _______________________________________________________________
 echo:          
-call :dk_color2 %_White% "            " %_Green% "Choose a menu option using your keyboard :"
+call :dk_color2 %_White% "            " %_Green% "请用键盘选择菜单选项 :"
 choice /C:1234560 /N
 set _erl=%errorlevel%
 
@@ -17372,7 +17372,7 @@ echo:
 echo [1] Continue Anyway
 echo [0] Go Back
 echo:
-call :dk_color %_Green% "Choose a menu option using your keyboard [1,0] :"
+call :dk_color %_Green% "请用键盘选择菜单选项 [1,0] :"
 choice /C:10 /N
 if !errorlevel!==2 goto cedmenu2
 if !errorlevel!==1 rem
@@ -18198,7 +18198,7 @@ echo                 [5] Change Office Update Channel
 echo                 [0] %_exitmsg%
 echo         ____________________________________________________________
 echo: 
-call :dk_color2 %_White% "           " %_Green% "Choose a menu option using your keyboard [1,2,3,4,5,0]"
+call :dk_color2 %_White% "           " %_Green% "请用键盘选择菜单选项 [1,2,3,4,5,0]"
 choice /C:123450 /N
 set _el=!errorlevel!
 if !_el!==6  exit /b
@@ -18243,7 +18243,7 @@ echo:
 echo                 [0] Go Back
 echo         ____________________________________________________________
 echo: 
-call :dk_color2 %_White% "            " %_Green% "Choose a menu option using your keyboard [1,2,3,4,0]"
+call :dk_color2 %_White% "            " %_Green% "请用键盘选择菜单选项 [1,2,3,4,0]"
 choice /C:12340 /N
 set _el=!errorlevel!
 if !_el!==5  goto :oemenu
@@ -18404,7 +18404,7 @@ echo [1] Continue
 echo [0] Go Back
 %line%
 echo:
-call :dk_color %_Green% "Choose a menu option using your keyboard:"
+call :dk_color %_Green% "请用键盘选择菜单选项:"
 choice /C:AENOPJRVWLKDT10 /N
 set _el=!errorlevel!
 if !_el!==15 goto :oemenu
